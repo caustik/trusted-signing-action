@@ -188,7 +188,7 @@ runs:
       run: |
         $modulePath = "${{ github.action_path }}/trusted-signing-module-0.3.18.zip"
         $installPath = "${{ github.action_path }}/TrustedSigning"
-        Expand-Archive -Path $modulePath -DestinationPath $installPath
+        Expand-Archive -Force -Path $modulePath -DestinationPath $installPath
         Import-Module -Name $installPath
 
         $params = @{}
